@@ -2,7 +2,7 @@ pipeline {
 
       agent any
       environment {
-            registry = "pramdoc/kproject"
+            registry = "anuragsharma02/anuragsharma"
             registryCredential = 'Docker'
             dockerImage = ''
       }
@@ -26,7 +26,7 @@ pipeline {
          stage('Deploy our image') {
                steps{
             
-                           bat "docker push pramdoc/kproject:%BUILD_NUMBER%"
+                           bat "docker push anuragsharma02/anuragsharma:%BUILD_NUMBER%"
                            }
                      
                 }
